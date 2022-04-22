@@ -9,7 +9,7 @@ discord: Tomáš - kokes#4989
 # Seznamy textu k analyze
 
 krtecek = '''
-Kapitola 33, kniha 2.ddfgdgf
+Kapitola 33, kniha 2.
 Hluboko, ale opravdu hluboko pod zemí přespával malý a velice roztomilý krteček,
 který se každé ráno vyhrabával na zem, kde také zažíval nejrůznější dobrodružství.
 Na jedné louce, kde kvetlo a překrásně vonělo luční kvítí, se začal tvořit kopeček hlíny, 
