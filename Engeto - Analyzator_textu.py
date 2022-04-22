@@ -14,7 +14,8 @@ Hluboko, ale opravdu hluboko pod zemí přespával malý a velice roztomilý krt
 který se každé ráno vyhrabával na zem, kde také zažíval nejrůznější dobrodružství.
 Na jedné louce, kde kvetlo a překrásně vonělo luční kvítí, se začal tvořit kopeček hlíny, 
 ze kterého najednou vykoukly tři vlásky a poté i malé zaoblené tělíčko, které patřilo krtečkovi.
-Krteček se protáhl a zívl. Sotva ale vylezl zpod země, najednou ho něco objalo kolem jeho bříška a přeneslo ho to přes dřevěný plot. 
+Krteček se protáhl a zívl. Sotva ale vylezl zpod země, najednou ho něco objalo kolem jeho bříška a 
+přeneslo ho to přes dřevěný plot. 
 Krteček byl vysoko ve vzduchu, avšak najednou se ocitl ve vodě, kam ho to stvoření zahodilo. 
 Ptáte se, co se stalo? Krtečka právě chytil slon svým dlouhým chobotem, 
 přenesl ho přes plot a pak ho hodil do vody, která byla velmi studená.
@@ -26,15 +27,22 @@ Když pelikán zobák otevřel, krteček rychle vyskočil ven a značně znepoko
 sapkowski = '''
 Kapitola 25, kniha 3.
 Zátoka se ježila lodními stěžni se skasanými plachtami, bílými i barevnými. 
-Větší lodě kotvily na vlnolamem a hrází chráněné rejdě. Ve vnitřním přístavu byla u dřevěných mol připoutána menší i úplně malá plavidla. 
+Větší lodě kotvily na vlnolamem a hrází chráněné rejdě. 
+Ve vnitřním přístavu byla u dřevěných mol připoutána menší i úplně malá plavidla. 
 Na plážích skoro každé volné místo zabíraly čluny. Nebo jejich zbytky.
-Na konci mysu atakovaném zpěněnými vlnami příboje se tyčil maják z bílých a červených cihel, obnovená stavba z elfských časů. 
+Na konci mysu atakovaném zpěněnými vlnami příboje se tyčil maják z bílých a červených cihel, 
+obnovená stavba z elfských časů. 
 Zaklínač pobídl patou svoji hnědou klisnu. 
-Klepna zvedla hlavu a roztáhla nozdry, jako by si i ona vychutnávala větrem přinášenou vůni moře, a poklusem vyrazila přes písečné přesypy k blízkému městu.
-Město Kerack, metropole stejnojmenného království, se rozkládalo na obou protilehlých březích ústí řeky Adalatte a skládalo se ze tří oddělených, nápadně se lišících okrsků.
-Na levém břehu Adalatte se vedle přístavu a doků rozkládal průmyslový a obchodní komplex zahrnující loděnice a dílny, faktorie, překladiště a sklady, tržiště a bazary. 
-Na protějším břehu ve čtvrti zvané Palmyra stály chalupy a chatrče pracujícího lidu a chudiny, domky a krámky drobných obchodníků, 
-dobytčí ohrady a jatka, jakož i různé až po soumraku ožívající podniky a lokály, poněvadž Palmyra byla rovněž čtvrtí zábav a zakázaných požitků. 
+Klepna zvedla hlavu a roztáhla nozdry, jako by si i ona vychutnávala větrem přinášenou vůni moře, 
+a poklusem vyrazila přes písečné přesypy k blízkému městu.
+Město Kerack, metropole stejnojmenného království, se rozkládalo na obou protilehlých březích ústí řeky Adalatte a 
+skládalo se ze tří oddělených, nápadně se lišících okrsků.
+Na levém břehu Adalatte se vedle přístavu a doků rozkládal průmyslový a obchodní komplex zahrnující loděnice a dílny, 
+faktorie, překladiště a sklady, tržiště a bazary. 
+Na protějším břehu ve čtvrti zvané Palmyra stály chalupy a chatrče pracujícího lidu a chudiny, 
+domky a krámky drobných obchodníků, 
+dobytčí ohrady a jatka, jakož i různé až po soumraku ožívající podniky a lokály, 
+poněvadž Palmyra byla rovněž čtvrtí zábav a zakázaných požitků. 
 Jak Geralt dobře věděl, bylo zde možno též snadno přijít o měšec nebo dostat nožem mezi žebra.
 '''
 kulhanek = '''
@@ -64,7 +72,8 @@ ale s takovým přízvukem, že mu bylo sotva rozumět.
 Cizinec byl vychrtlý, tváře propadlé únavou, bledé jak smrt, ale v očích mu hořely plameny lojových svíc,
  jako by hořely samy oči.
 „Jak si přeješ, vzácný pane… zaplatit máš jistě čím?“ Na to by se otec zeptal, i kdyby u stolu seděl sám Lucifer.
-Cizinec odstrčil umáčený vak, sáhl pod plášť a pak to zazvonilo. Marodéři opět přestali prznit mou sestru a opět vzhlédli. 
+Cizinec odstrčil umáčený vak, sáhl pod plášť a pak to zazvonilo.
+Marodéři opět přestali prznit mou sestru a opět vzhlédli. 
 I moje sestra vzhlédla. Když zazvoní zlato, vzhlédne každý.
 Je to divné – každý peníz by měl cinknout stejně – měďák, stříbrňák i zlaťák, ale není to tak. Všichni to máme v uchu.
 Otec se uklonil, až se nosem dotkl stolní desky, zvedl obrovskou zářivou minci a řekl:
@@ -163,7 +172,7 @@ max_hodnoty = max(hodnoty)
 cislice = list(map(int, cislice))
 soucet = sum(cislice)
 
-#Zobrazeni tabulky s vysledky
+# Zobrazeni tabulky s vysledky
 print(f'''{cara}
 Text obsahuje celkem {len(pocet_slov)} slov.
 Text obsahuje celkem {len(zacina_velkym_pismenem)} slov zacinajici velkym pismenem.
@@ -180,6 +189,6 @@ for klic in delky_porovnani.keys():
     print(
         f'    {klic}|{"*" * delky_porovnani.get(klic)}{" " * (max_hodnoty - delky_porovnani.get(klic))}|{delky_porovnani.get(klic)}')
 
-print( cara , " Dekujeme za pouziti naseho Analyzatoru ", cara, sep='\n')
+print(cara, " Dekujeme za pouziti naseho Analyzatoru ", cara, sep='\n')
 
-   # Konec programu
+# Konec programu
