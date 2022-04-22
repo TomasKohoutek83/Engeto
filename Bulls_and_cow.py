@@ -5,9 +5,6 @@ list_cisel = []
 for i in range(0,4):
     n = random.randint (1,9)
     list_cisel.append(n)
-for cislo in list_cisel:
-    if cislo.isdigit():
-        print("nok")
 
 
 
