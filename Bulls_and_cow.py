@@ -1,21 +1,28 @@
 import random
 
-#
-# list_cisel = []
-# for i in range(0,4):
-#     n = random.randint (1,9)
-#     list_cisel.append(n)
 
 vybrana_cisla = []
 list_cisel=[0,1,2,3,4,5,6,7,8,9]
 
-
-while True:
-    n= random.choice(list_cisel)
-    print(n)
-    if n not in vybrana_cisla and n is not vybrana_cisla[4]:
+for n in range(0,4):
+    n = random.randint (0,9)
+    if n not in vybrana_cisla:
         vybrana_cisla.append(n)
 
+print(vybrana_cisla)
+
+
+
+# def vyber():
+#     n= random.choice(list_cisel)
+#     if n not in vybrana_cisla:
+#         vybrana_cisla.append(n)
+#     elif vyber():
+#         n = random.choice(list_cisel)
+#         if n not in vybrana_cisla:
+#             vybrana_cisla.append(n)
+
+# vyber()
 
 
 
