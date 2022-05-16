@@ -28,9 +28,11 @@ def kontrola_tipu_1():
             break
 
 
-
 def kontrola_nuly():
-    tipovana_cisla.split()
+
+
+
+
 
 
 
@@ -43,6 +45,7 @@ Tato hra se jmenuje Bulls and Cows.
 
 gen_cisel()
 kontrola_tipu_1()
+kontrola_nuly()
 
 
 
