@@ -3,8 +3,11 @@ import random
 
 
 tipovana_cisla = ['0','1']
-if tipovana_cisla[0] > 0:
+prvni_cislo = int(tipovana_cisla[0])
+if prvni_cislo == 0:
     print("Cislo zacina nulou")
+else:
+    print("nok")
 
 
 def kontrola_tipu_1():

@@ -19,12 +19,12 @@ def gen_cisel():
 
 def kontrola_tipu_1():
     while True:
-        tip_cisel = (input("Napis svuj typ (ctyrmistne cislo): "))
+        tip_cisel = (input("Napis svuj tip: "))
 
         if len(tip_cisel) != 4:
-            print("Nezadal jsi 4 cisla")
+            print("Nezadal jsi 4 cisla!!")
         elif not tip_cisel.isdigit():
-            print("Nezadal jsi cisla")
+            print("Nezadal jsi cisla!!")
         else:
             for x in tip_cisel:
                 tipovana_cisla.append(x)
@@ -32,26 +32,41 @@ def kontrola_tipu_1():
 
 
 def kontrola_nuly():
-    if tipovana_cisla[0] == 0:
-        print("Cislo zacina nulou")
+    prvni_cislo =int(tipovana_cisla[0])
+    if prvni_cislo == 0:
+        print("Cislo zacina nulou!!")
+        tipovana_cisla.clear()
+        kontrola_tipu_1()
+
+def kontrola_duplicit():
+    for cislo in tipovana_cisla:
+        double = tipovana_cisla.count(cislo)
+        if double > 1:
+            print("Duplicita cisel!!")
+            tipovana_cisla.clear()
+            kontrola_tipu_1()
+
+
 
 
 print(f'''
-Vitam te v nasi hre!
+Vitam te v nasi hre Bulls and Cows!
 {cara}
 Vygeneruji pro tebe 4 nahodna cisla, ktere musis uhadnout.
-Tato hra se jmenuje Bulls and Cows.
+Zadat 4 cisla ktera nesmi zacinat 0 a zadne cislo
+se nesmi opakovat
 {cara}''')
 
 gen_cisel()
 kontrola_tipu_1()
 kontrola_nuly()
+kontrola_duplicit()
 
 
 print(f"{cara}")
 print(vybrana_cisla)
 print(tipovana_cisla)
-print(tipovana_cisla[0])
+
 
 
 
