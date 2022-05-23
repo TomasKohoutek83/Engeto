@@ -1,37 +1,80 @@
 import random
 
+cara = "-" * 60
+generovana_cisla = []
+list_cisel = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+tipovana_cisla = []
+chyba = "Chybne zadani !!!"
 
 
-tipovana_cisla = ['0','1']
-prvni_cislo = int(tipovana_cisla[0])
-if prvni_cislo == 0:
-    print("Cislo zacina nulou")
-else:
-    print("nok")
+def gen_cisel():
+    while len(generovana_cisla) != 4:
+        n = random.choice(list_cisel)
+        if n not in generovana_cisla:
+            generovana_cisla.append(n)
+            if generovana_cisla[0] == 0:
+                generovana_cisla.pop(0)
+                m = random.randint(1, 9)
+                generovana_cisla.append(m)
 
 
 def kontrola_tipu_1():
     while True:
-        tip_cisel = str(input("Napis svuj typ (ctyrmistne cislo): "))
-
+        tip_cisel = (input("Napis svuj tip: "))
+        prvni = int(tip_cisel[0])
+        for cislo in tip_cisel:
+            double = tip_cisel.count(cislo)
+            if double > 1:
+                print(f"{chyba}Duplicita cisel!!")
+                break
         if len(tip_cisel) != 4:
-            print("Nezadal jsi 4 cisla")
+            print(f"{chyba}Nezadal jsi 4 cisla!!")
         elif not tip_cisel.isdigit():
-            print("Nezadal jsi cisla")
+            print(f"{chyba}Nezadal jsi cisla!!")
+        elif prvni == 0:
+            print(f"{chyba}Cislo zacina nulou!!")
+
         else:
             for x in tip_cisel:
                 tipovana_cisla.append(x)
-            break
-
-
-def kontrola_nuly():
-    if tipovana_cisla[0] == 0:
-        print("Cislo zacina nulou")
-
-
-# kontrola_tipu_1()
-# kontrola_nuly()
+                break
 
 
 
-print(tipovana_cisla[0])
+#def kontrola_nuly():
+    # prvni_cislo =int(tipovana_cisla[0])
+    # if prvni_cislo == 0:
+    #     print("Cislo zacina nulou!!")
+    #     tipovana_cisla.clear()
+    #     kontrola_tipu_1()
+
+#def kontrola_duplicit():
+    # for cislo in tipovana_cisla:
+    #     double = tipovana_cisla.count(cislo)
+    #     if double > 1:
+    #         print("Duplicita cisel!!")
+    #         tipovana_cisla.clear()
+    #         kontrola_tipu_1()
+
+
+
+
+print(f'''
+Vitam te v nasi hre Bulls and Cows!
+{cara}
+Vygeneruji pro tebe 4 nahodna cisla, ktere musis uhadnout.
+Zadej 4 cisla ktera nesmi zacinat 0 a zadne cislo
+se nesmi opakovat.
+{cara}''')
+
+gen_cisel()
+kontrola_tipu_1()
+#kontrola_nuly()
+#kontrola_duplicit()
+
+print(f"{cara}")
+
+
+
+
+print(tipovana_cisla)
