@@ -17,48 +17,50 @@ def gen_cisel():
                 m = random.randint(1, 9)
                 generovana_cisla.append(m)
 
-
-def kontrola_tipu_1():
-    while True:
+   
+           
+        
+def zadani_cisla():
         tip_cisel = (input("Napis svuj tip: "))
-        prvni = int(tip_cisel[0])
-        for cislo in tip_cisel:
-            double = tip_cisel.count(cislo)
-            if double > 1:
-                print(f"{chyba}Duplicita cisel!!")
-                break
-        if len(tip_cisel) != 4:
-            print(f"{chyba}Nezadal jsi 4 cisla!!")
-        elif not tip_cisel.isdigit():
-            print(f"{chyba}Nezadal jsi cisla!!")
-        elif prvni == 0:
-            print(f"{chyba}Cislo zacina nulou!!")
+        for x in tip_cisel:
+            tipovana_cisla.append(x)
+        kontrola_pismen(tip_cisel)
+        kontrola_poctu(tip_cisel)
+        kontrola_duplicit(tipovana_cisla)
+        kontrola_nuly(tipovana_cisla)
+        
+        
+def kontrola_pismen(tip_cisel):
+    if not tip_cisel.isdigit():
+        print(f"{chyba} Nezadal jsi cisla!!")
+        tipovana_cisla.clear()
+        zadani_cisla()
+        
+              
+def kontrola_poctu(tip_cisel):
+    if len(tip_cisel) != 4:
+        print(f"{chyba}Nezadal jsi 4 cisla!!")
+        tipovana_cisla.clear()
+        zadani_cisla()
+               
 
-        else:
-            for x in tip_cisel:
-                tipovana_cisla.append(x)
-                break
-
-
-
-#def kontrola_nuly():
-    # prvni_cislo =int(tipovana_cisla[0])
-    # if prvni_cislo == 0:
-    #     print("Cislo zacina nulou!!")
-    #     tipovana_cisla.clear()
-    #     kontrola_tipu_1()
-
-#def kontrola_duplicit():
-    # for cislo in tipovana_cisla:
-    #     double = tipovana_cisla.count(cislo)
-    #     if double > 1:
-    #         print("Duplicita cisel!!")
-    #         tipovana_cisla.clear()
-    #         kontrola_tipu_1()
-
-
-
-
+def kontrola_nuly(tipovana_cisla):
+    prvni_cislo = int(tipovana_cisla[0])
+    if prvni_cislo == 0:
+        print(f"{chyba} Cislo zacina nulou!!")
+        tipovana_cisla.clear()
+        zadani_cisla()
+        
+        
+def kontrola_duplicit(tipovana_cisla):
+    for cislo in tipovana_cisla:
+        double = tipovana_cisla.count(cislo)
+        if double > 1:
+            print(f"{chyba}  Duplicita cisel!!")
+            tipovana_cisla.clear()
+            zadani_cisla()
+            
+            
 print(f'''
 Vitam te v nasi hre Bulls and Cows!
 {cara}
@@ -68,13 +70,7 @@ se nesmi opakovat.
 {cara}''')
 
 gen_cisel()
-kontrola_tipu_1()
-#kontrola_nuly()
-#kontrola_duplicit()
-
-print(f"{cara}")
-
-
-
-
+print(generovana_cisla)
+zadani_cisla()
+print(cara)
 print(tipovana_cisla)
