@@ -1,17 +1,35 @@
+"""
+projekt_2: Druhz projekt do Engeto Online Python Akademie
+
+author: Tomas Kohoutek
+email: Tomas.kohoutek83@gmail.com
+discord: Tomáš - kokes#4989
+
+
+Komentar ke kodu:
+Pro posouzeni posilam asi 4 verzi tohoto kodu. Musim priznat ze me to celkem potrapilo.
+Ve finale je to funkcni, ale kod je trosku chaoticky. Hlavni cast porgramu ve funkcich nebyla tak
+uplne tezka, ale naslednymi podminkami napr: cislo nesmi zacinat nulou nebo nesmi byt cislo,  my to celkem
+s komplikovaly.
+Ale funguje to :)
+
+"""
+
 import random
 
+# Zakladni promene
 cara = "-" * 60
 chyba = "Chybné zadání !!!"
 
 
-# Funkce k vygenerovani hadaneho cislaL?::":>:>efff:>:>
+# Funkce k vygenerovani hadaneho cisla
 def gen_cisla():
     while True:
         cislo = random.randint(1000, 9999)
         if kontrola_duplicit(cislo):
             return cislo
 
-
+# Funkce ke kontrole duplicit.
 def kontrola_duplicit(cislo):
     cisla_do_listu = prevod_cisel_list(cislo)
     if len(cisla_do_listu) == len(set(cisla_do_listu)):
@@ -20,6 +38,7 @@ def kontrola_duplicit(cislo):
     else:
         return False
 
+# Funkce pro prevod do potrebnho formatu. Listy
 def prevod_cisel_list(cislo):
     return [int(i) for i in str(cislo)]
 
@@ -42,23 +61,26 @@ def porovani_a_vysledek(cislo, tip):
 
     return bull_and_cow
 
-
+# Vypis funkcnosti a pravidel hry.
 print(f'''
 Vítám tě v naší hře Bulls and Cows!
 {cara}
 Vygeneruji pro tebe čtyřmístné číslo, které musíš uhádnout.
-Tvým úkolem je zadat čtyřmístné číslo, ale pozo!! číslo nesmí začínat nulou!! a žádné číslo
+Tvým úkolem je zadat čtyřmístné číslo, ale pozor!! číslo nesmí začínat nulou!! a žádné číslo
 se nesmi opakovat.
 {cara}''')
 
+# Spousteni generovani cisla
 gen_cislo = gen_cisla()
 
+
+# Smycka pro kontrolu hodnot a vysledek hry
 while True:
     tip_hrace = (input("Napiš svůj tip: "))
     if not tip_hrace.isdigit():
         print(f"{chyba} Nezadal jsi čísla!!")
         continue
-
+# Pomocny prevod na int
     prevod = int(tip_hrace)
 
     if not kontrola_duplicit(tip_hrace):
