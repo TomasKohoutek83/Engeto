@@ -4,7 +4,7 @@ cara = "-" * 60
 chyba = "Chybné zadání !!!"
 
 
-# Funkce k vygenerovani hadaneho cisla
+# Funkce k vygenerovani hadaneho cislaL?::":>:>efff:>:>
 def gen_cisla():
     while True:
         cislo = random.randint(1000, 9999)
@@ -46,8 +46,8 @@ def porovani_a_vysledek(cislo, tip):
 print(f'''
 Vítám tě v naší hře Bulls and Cows!
 {cara}
-Vygeneruji pro tebe ctyřmístné číslo, které musíš uhádnout.
-Tvým úkolem je zadat ctyřmístné číslo, ale pozo!! číslo nesmí začínat nulou!! a žádné číslo
+Vygeneruji pro tebe čtyřmístné číslo, které musíš uhádnout.
+Tvým úkolem je zadat čtyřmístné číslo, ale pozo!! číslo nesmí začínat nulou!! a žádné číslo
 se nesmi opakovat.
 {cara}''')
 
