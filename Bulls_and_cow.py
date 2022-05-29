@@ -9,8 +9,8 @@ discord: Tomáš - kokes#4989
 Komentar ke kodu:
 Pro posouzeni posilam asi 4 verzi tohoto kodu. Musim priznat ze me to celkem potrapilo.
 Ve finale je to funkcni, ale kod je trosku chaoticky. Hlavni cast porgramu ve funkcich nebyla tak
-uplne tezka, ale naslednymi podminkami napr: cislo nesmi zacinat nulou nebo nesmi byt cislo,  my to celkem
-s komplikovaly.
+uplne tezka, ale naslednymi podminkami napr: cislo nesmi zacinat nulou nebo nesmi byt cislo,  mi
+to podminkz celkem s komplikovaly.
 Ale funguje to :)
 
 """
