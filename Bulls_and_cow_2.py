@@ -15,11 +15,10 @@ def gen_cisla():
 def kontrola_duplicit(cislo):
     cisla_do_listu = prevod_cisel_list(cislo)
     if len(cisla_do_listu) == len(set(cisla_do_listu)):
-        print(cisla_do_listu)
+        #print(cisla_do_listu)
         return True
     else:
         return False
-
 
 def prevod_cisel_list(cislo):
     return [int(i) for i in str(cislo)]
