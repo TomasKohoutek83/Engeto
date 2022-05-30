@@ -79,6 +79,7 @@ se nesmi opakovat.
 # Spousteni generovani cisla
 gen_cislo = gen_cisla()
 pokusy = int(input("Napiš na kolik pokusů si troufáš: "))
+print(cara)
 
 # Smycka pro kontrolu hodnot a vysledek hry
 while pokusy >0:
