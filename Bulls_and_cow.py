@@ -30,6 +30,8 @@ def gen_cisla():
             return cislo
 
 # Funkce ke kontrole duplicit.
+
+
 def kontrola_duplicit(cislo):
     cisla_do_listu = prevod_cisel_list(cislo)
     if len(cisla_do_listu) == len(set(cisla_do_listu)):
@@ -39,6 +41,8 @@ def kontrola_duplicit(cislo):
         return False
 
 # Funkce pro prevod do potrebnho formatu. Listy
+
+
 def prevod_cisel_list(cislo):
     return [int(i) for i in str(cislo)]
 
@@ -61,21 +65,23 @@ def porovani_a_vysledek(cislo, tip):
 
     return bull_and_cow
 
+
 # Vypis funkcnosti a pravidel hry.
 print(f'''
 Vítám tě v naší hře Bulls and Cows!
 {cara}
 Vygeneruji pro tebe čtyřmístné číslo, které musíš uhádnout.
-Tvým úkolem je zadat čtyřmístné číslo, ale pozor!! číslo nesmí začínat nulou!! a žádné číslo
+Tvým úkolem je zadat čtyřmístné číslo, ale pozor!! 
+číslo nesmí začínat nulou!! a žádné číslo
 se nesmi opakovat.
 {cara}''')
 
 # Spousteni generovani cisla
 gen_cislo = gen_cisla()
-
+pokusy = int(input("Napiš na kolik pokusů si troufáš: "))
 
 # Smycka pro kontrolu hodnot a vysledek hry
-while True:
+while pokusy >0:
     tip_hrace = (input("Napiš svůj tip: "))
     if not tip_hrace.isdigit():
         print(f"{chyba} Nezadal jsi čísla!!")
@@ -93,9 +99,13 @@ while True:
 
     bull_cow = porovani_a_vysledek(gen_cislo, prevod)
     print(f"{bull_cow[0]} bulls, {bull_cow[1]} cows")
+    pokusy -= 1
 
     if bull_cow[0] == 4:
         print("Gratuluji !!! Přišel jsi na to!!!")
         break
+    
+else:
+    print(f"Zřejmě jsi přecenil svoje síly :) . Hadané číslo bylo {gen_cislo}" )
 
 print(f"{cara}")
